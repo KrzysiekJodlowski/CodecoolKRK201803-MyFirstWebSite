@@ -37,11 +37,14 @@ nav li a:hover {
     background-color: darkturquoise; 
     color: white;    
 }
-#backToTop a {
-    /* display: none; */
+#backToTop {
+    display: none;
+}
+#backToTop a {    
     text-decoration: none;    
     background-color: darkturquoise;
     color: white;
+    border: solid 2px white;
     font-family: 'Fjalla One', sans-serif;
     font-size: 1.6em;
     padding: 0.7em 1em;
