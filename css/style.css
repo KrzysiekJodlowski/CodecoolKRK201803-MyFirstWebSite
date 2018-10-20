@@ -120,5 +120,28 @@ footer p {
     font-size: 0.7em;
 }
 @media screen and (max-width: 1050px) {
-    #titleBar img { display: none; }    
+    #titleBar img { 
+        display: none; 
+    }    
+}
+@media screen and (max-width: 870px) {
+    header { 
+        background-image: none;
+    }    
+    nav ul {
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    nav li a {
+        padding: 0.6em 0.5em;
+    }
+}
+@media screen and (max-width: 520px) {
+    #titleBar {
+        padding: 6% 4%;
+    }
+    #titleBar h1 {
+        font-size: 15vw;
+    }
+
 }
