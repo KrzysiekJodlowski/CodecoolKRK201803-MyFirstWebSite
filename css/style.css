@@ -159,6 +159,34 @@ form input, textarea {
     min-width: 200px;
     color: grey;
 }
+div.gallery {
+    border: 1px solid #ccc;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+.responsive {
+    padding: 2% 1%;
+    float: left;
+    width: 24.99999%;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 @media screen and (max-width: 1050px) {
     #titleBar img { 
         display: none; 
@@ -176,6 +204,10 @@ form input, textarea {
     }
     img {        
         padding: 5%;
+    }
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
     }
 }
 @media screen and (max-width: 520px) {
@@ -200,5 +232,8 @@ form input, textarea {
     }
     #titleBar h1 {
         font-size: 15vw;
+    }
+    .responsive {
+        width: 100%;
     }
 }
