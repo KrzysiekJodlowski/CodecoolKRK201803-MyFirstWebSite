@@ -1,6 +1,6 @@
 window.onscroll = function()
 {
-    if (pageYOffset >= 120) {
+    if (pageYOffset >= 300) {
         document.getElementById("backToTop").style.display = "block";
     } else {
         document.getElementById("backToTop").style.display = "none";

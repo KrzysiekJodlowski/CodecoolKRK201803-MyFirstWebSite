@@ -161,9 +161,10 @@ form input, textarea {
 }
 div.gallery {
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 div.gallery:hover {
-    border: 1px solid #777;
+    border: 1px solid darkturquoise;
 }
 div.gallery img {
     width: 100%;
@@ -180,7 +181,7 @@ div.desc {
 .responsive {
     padding: 2% 1%;
     float: left;
-    width: 24.99999%;
+    width: 33%;
 }
 .clearfix:after {
     content: "";
