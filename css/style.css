@@ -6,6 +6,10 @@ body {
     padding:0;
     height:100%;
 }
+h1 {
+    padding: 2%;
+    font-weight: bold;
+}
 hr {
     border-top: lightgray 1px solid;
 }
@@ -139,6 +143,21 @@ form input, textarea {
 }
 #submitButton {
     width: 20%;
+}
+.tripParameters {
+    border: 0 solid silver;
+    border-width: 0 0 0 1px;
+    font-size: 1.3em;    
+    margin: 1%;
+}
+.tripParameters li {
+    border: 0 solid silver;
+    border-width: 0 0 1px 0;
+    padding:.5em;
+    padding: 0.15em;
+    width: 18%;
+    min-width: 200px;
+    color: grey;
 }
 @media screen and (max-width: 1050px) {
     #titleBar img { 
