@@ -78,12 +78,12 @@ nav li a:hover {
     background-color: white;
     color: darkturquoise;
 }
+header, footer {
+    background-color: darkturquoise;
+}
 header {
     background-image: url("../img/header-bg.jpg");
     background-repeat: no-repeat;
-}
-header, footer {
-    background-color: darkturquoise;
 }
 footer p {
     color: white;
