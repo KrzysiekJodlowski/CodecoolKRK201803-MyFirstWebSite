@@ -40,20 +40,23 @@
             </section>
             <br>
             <hr>
-            <form>
+            <form name="contactForm" id="contactForm">
                 <label for="name">Name:</label>
                 <br>
-                <input type="text" name="name" id="name" size="50" placeholder="Enter your name">
+                <input type="text" name="name" id="name" size="50" 
+                    onKeyup="checkIfFormIsFull()" placeholder="Enter your name">
                 <br><br>
                 <label for="eMail">E-mail:</label>
                 <br>
-                <input type="email" name="eMail" id="eMail" size="50" placeholder="Give your email">
+                <input type="email" name="eMail" id="eMail" size="50" 
+                    onKeyup="checkIfFormIsFull()" placeholder="Give your email">
                 <br><br>
                 <label for="message">Message:</label>
                 <br>
-                <textarea name="message" id="message" rows="10" cols="50" placeholder="Enter your message here"></textarea>
+                <textarea name="message" id="message" rows="10" cols="50" 
+                    onKeyup="checkIfFormIsFull()" placeholder="Enter your message here"></textarea>
                 <br>
-                <input type="submit" id="submit" value="SEND">
+                <input type="button" id="submitButton" value="SEND" disabled="disabled" onclick="validateForm()">
             </form>
             <hr>
         </div>

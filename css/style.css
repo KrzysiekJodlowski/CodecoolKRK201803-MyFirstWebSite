@@ -137,7 +137,7 @@ form input, textarea {
     display: block;
     margin: 1% auto 1% auto;
 }
-#submit {
+#submitButton {
     width: 20%;
 }
 @media screen and (max-width: 1050px) {
