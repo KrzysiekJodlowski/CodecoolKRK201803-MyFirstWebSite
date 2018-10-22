@@ -44,17 +44,24 @@
                 <label for="name">Name:</label>
                 <br>
                 <input type="text" name="name" id="name" size="50" 
-                    onKeyup="checkIfFormIsFull()" placeholder="Enter your name">
+                    onKeyup="checkIfFormIsFull();validateName();validateEmail();validateMessage()" 
+                    placeholder="Enter your name">
+                <span id="contactNameError">Name field should contain only two words containing only<br>
+                    letters (each first letter uppercase and space between words)</span>
                 <br><br>
                 <label for="eMail">E-mail:</label>
                 <br>
                 <input type="email" name="eMail" id="eMail" size="50" 
-                    onKeyup="checkIfFormIsFull()" placeholder="Give your email">
+                    onKeyup="checkIfFormIsFull();validateName();validateEmail();validateMessage()" 
+                    placeholder="Give your email">
+                <span id="contactEmailError">E-mail field should contain valid e-mail adress</span>
                 <br><br>
                 <label for="message">Message:</label>
                 <br>
                 <textarea name="message" id="message" rows="10" cols="50" 
-                    onKeyup="checkIfFormIsFull()" placeholder="Enter your message here"></textarea>
+                    onKeyup="checkIfFormIsFull();validateName();validateEmail();validateMessage()" 
+                    placeholder="Enter your message here"></textarea>
+                <span id="contactMessageError">Message field should contain at least 10 characters</span>
                 <br>
                 <input type="button" id="submitButton" value="SEND" disabled="disabled" onclick="validateForm()">
             </form>

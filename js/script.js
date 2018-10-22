@@ -10,20 +10,21 @@ window.onscroll = function()
 function checkIfFormIsFull()
 {
     var form = document.forms["contactForm"].elements;;
-    var cansubmit = true;
+    var canSubmit = true;
 
     for (var i = 0; i < form.length; i++) {
-        if (form[i].value.length == 0) cansubmit = false;
+        if (form[i].value.length == 0) canSubmit = false;
     }
-    document.getElementById('submitButton').disabled = !cansubmit;
+    document.getElementById('submitButton').disabled = !canSubmit;
 }
 
 function validateForm()
 {
     var nameValidation = validateName();
     var emailValidation = validateEmail();
+    var messageValidation = validateMessage();
 
-    if (!nameValidation || !emailValidation) {
+    if (!nameValidation || !emailValidation || !messageValidation) {
         return false;
     }
     confirmAndClearForm();
@@ -37,10 +38,11 @@ function validateName()
 
     if (isValid) {
         document.getElementById("name").style.borderColor = "green";
+        document.getElementById("contactNameError").style.display = "none";
         return true;
     } else {
         document.getElementById("name").style.borderColor = "red";
-        errorUserNameMessage();
+        document.getElementById("contactNameError").style.display = "block";
         return false;
     }
 }
@@ -51,26 +53,34 @@ function validateEmail()
 
     if (isValid) {
         document.getElementById("eMail").style.borderColor = "green";
+        document.getElementById("contactEmailError").style.display = "none";
         return true;
     } else {
         document.getElementById("eMail").style.borderColor= "red";
-        errorUserEmailMessage();
+        document.getElementById("contactEmailError").style.display = "block";
         return false;
     }
 }
-function errorUserNameMessage()
+function validateMessage()
 {
-    alert("Name field should contain only two words containing only letters" +
-        " (first letter uppercase) and space between them!");
-}
-function errorUserEmailMessage()
-{
-    alert("E-mail field should contain valid e-mail adress!");
+    var userMessage = document.getElementById("message").value.trim();
+    var isValid = /.{10,}/.test(userMessage);
+
+    if (isValid) {
+        document.getElementById("message").style.borderColor = "green";
+        document.getElementById("contactMessageError").style.display = "none";
+        return true;
+    } else {
+        document.getElementById("message").style.borderColor= "red";
+        document.getElementById("contactMessageError").style.display = "block";
+        return false;
+    }
 }
 function confirmAndClearForm()
 {
     document.getElementById("contactForm").reset();
     document.getElementById("name").style.borderColor = "initial";
     document.getElementById("eMail").style.borderColor = "initial";
+    document.getElementById("message").style.borderColor = "initial";
     alert("Your message has been sent!")    
 }

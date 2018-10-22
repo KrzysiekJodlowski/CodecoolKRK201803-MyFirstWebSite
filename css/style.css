@@ -136,10 +136,19 @@ form label {
     text-align: center;
     margin: -1%;
 }
-form input, textarea {
+form input, textarea, span, img {
+    display: flex;
+    justify-content: center;
+}
+form input, textarea, span {
     font-family: 'Crimson Text', serif;
-    display: block;
+    width: 400px;
     margin: 1% auto 1% auto;
+}
+form span {
+    display: none;
+    font-size: 0.8em;
+    color: red;
 }
 #submitButton {
     width: 20%;
