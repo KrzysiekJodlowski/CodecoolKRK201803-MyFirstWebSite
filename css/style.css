@@ -136,11 +136,11 @@ form label {
     text-align: center;
     margin: -1%;
 }
-form input, textarea, span, img {
+form input, form textarea, form span {
     display: flex;
     justify-content: center;
 }
-form input, textarea, span {
+form input, form textarea, form span {
     font-family: 'Crimson Text', serif;
     width: 400px;
     margin: 1% auto 1% auto;
