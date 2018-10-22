@@ -153,6 +153,14 @@ form span {
 #submitButton {
     width: 20%;
 }
+#sendConfirmation {
+    display: none;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.4em;    
+    color: green;
+    text-align: center;
+    margin-top: 2%;
+}
 .tripParameters {
     border: 0 solid silver;
     border-width: 0 0 0 1px;

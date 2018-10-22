@@ -82,5 +82,9 @@ function confirmAndClearForm()
     document.getElementById("name").style.borderColor = "initial";
     document.getElementById("eMail").style.borderColor = "initial";
     document.getElementById("message").style.borderColor = "initial";
-    alert("Your message has been sent!")    
+    document.getElementById("sendConfirmation").style.display = "block";
+    setInterval(function(){
+        document.getElementById("sendConfirmation").style.display = "none";
+    }, 3000);
+    
 }
