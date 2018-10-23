@@ -72,6 +72,7 @@ function validateMessage()
         return true;
     } else {
         document.getElementById("message").style.borderColor= "red";
+        document.getElementById("message").style.borderWidth = "2px";
         document.getElementById("contactMessageError").style.display = "block";
         return false;
     }
@@ -82,10 +83,14 @@ function confirmAndClearForm()
     document.getElementById("name").style.borderColor = "initial";
     document.getElementById("eMail").style.borderColor = "initial";
     document.getElementById("message").style.borderColor = "initial";
+    document.getElementById("message").style.borderWidth = "1px";
+    document.getElementById("message").style.borderColor = "rgb(169, 169, 169)";
+    document.getElementById("submitButton").style.display = "none";
     document.getElementById("sendConfirmation").style.display = "block";
     document.getElementById('submitButton').disabled = true;
     setInterval(function(){
         document.getElementById("sendConfirmation").style.display = "none";
+        document.getElementById("submitButton").style.display = "flex";
     }, 3000);
     
 }
