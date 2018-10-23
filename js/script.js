@@ -9,7 +9,7 @@ window.onscroll = function()
 
 function checkIfFormIsFull()
 {
-    var form = document.forms["contactForm"].elements;;
+    var form = document.forms["contactForm"].elements;
     var canSubmit = true;
 
     for (var i = 0; i < form.length; i++) {
@@ -83,6 +83,7 @@ function confirmAndClearForm()
     document.getElementById("eMail").style.borderColor = "initial";
     document.getElementById("message").style.borderColor = "initial";
     document.getElementById("sendConfirmation").style.display = "block";
+    document.getElementById('submitButton').disabled = true;
     setInterval(function(){
         document.getElementById("sendConfirmation").style.display = "none";
     }, 3000);
